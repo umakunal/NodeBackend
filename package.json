@@ -1,0 +1,23 @@
+{
+  "name": "nodebackend",
+  "version": "1.0.0",
+  "description": "This is node js api building project",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umakunal/NodeBackend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/umakunal/NodeBackend/issues"
+  },
+  "homepage": "https://github.com/umakunal/NodeBackend#readme",
+  "dependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
