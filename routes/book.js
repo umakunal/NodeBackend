@@ -1,19 +1,15 @@
-const express = require("express");
 
+const express = require("express");
+const BookController = require("../Controllers/BookController");
+const authMiddleware = require("../Middleware/test");
 const bookRouter = express.Router();
 
-bookRouter
-  .route("/")
-  .get((req, res) => {
-    res.send("All Books");
-  })
-  .post((req, res) => {
-    res.json({ data: "Book is stored" });
-  });
+bookRouter.use(authMiddleware).route("/").get(BookController.index).post(BookController.store);
 
-bookRouter.get("/:id", (req, res) => {
-  console.log("req==>", req.params);
-  res.send(`Single book of  ID: ${req.params.id}`);
-});
+bookRouter
+  .route("/:id")
+  .get(BookController.show)
+  .patch(BookController.update)
+  .delete(BookController.delete);
 
 module.exports = bookRouter;
