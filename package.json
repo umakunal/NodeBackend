@@ -4,7 +4,7 @@
   "description": "This is node js api building project",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon app.js"
+    "dev": "nodemon main.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/umakunal/NodeBackend#readme",
   "dependencies": {
-    "nodemon": "^2.0.20"
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20",
+    "pug": "^3.0.2"
   }
 }
